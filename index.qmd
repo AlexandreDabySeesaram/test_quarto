@@ -19,3 +19,6 @@ bibliography: Ressources/biblio_web.bib
 Where we can learn the basics about quarto.
 
 With and example of how to cite [@crameriMisuseColourScience2020a]
+
+
+here is my mod
