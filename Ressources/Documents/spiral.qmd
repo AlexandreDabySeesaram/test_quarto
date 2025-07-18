@@ -1,0 +1,55 @@
+```{python}
+
+
+
+import plotly.graph_objects as go
+import numpy as np
+import matplotlib.pyplot as plt
+
+# colors_plotly = colors[:, :3]
+
+theta = np.linspace(0, 3 * np.pi, 500)  # angle
+r = np.linspace(0, 1, 500)              # radius increases with angle
+
+x_points = r * np.cos(theta)
+y_points = 0.001*np.random.randn(*x_points.shape)
+z_points = r * np.sin(theta)
+colors_plotly = np.linspace(0, 1, 500)
+colors = plt.cm.viridis(np.linspace(0, 1, 500))                                        # Generate a color gradient
+
+# Create the 3D scatter plot
+fig = go.Figure(data=[go.Scatter3d(
+    x=x_points,
+    y=y_points,
+    z=z_points,
+    mode='markers',
+    marker=dict(
+        size=5,                                                                         # Size of the markers
+        color=colors_plotly,                                                            # Color of the markers
+        colorscale='viridis',                                                           # Color scale
+        showscale=False,                                                                 # Show color scale
+    )
+)])
+
+fig.update_layout(
+    plot_bgcolor='rgba(0,0,0,0)',  # Remove background color
+    width=450, 
+    height=355,  
+    scene=dict(
+        xaxis_title='x',
+        yaxis_title='y',
+        zaxis_title='z',
+    ),
+)
+
+camera = dict(
+    eye=dict(x=2.5, y=0., z=0.)
+    )
+
+
+fig.update_layout(scene_camera=camera )
+fig.show()
+
+
+
+```

@@ -1,6 +1,8 @@
 ---
-title: My first page
-toc: true
+title: Your website
+toc: false
+about:
+  template: marquee
   links:
     - icon: github
       text: Github
