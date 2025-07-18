@@ -1,0 +1,23 @@
+[
+  {
+    "objectID": "Ressources/Documents/spiral.html",
+    "href": "Ressources/Documents/spiral.html",
+    "title": "Test Website",
+    "section": "",
+    "text": "import plotly.graph_objects as go\nimport numpy as np\nimport matplotlib.pyplot as plt\n\n# colors_plotly = colors[:, :3]\n\ntheta = np.linspace(0, 3 * np.pi, 500)  # angle\nr = np.linspace(0, 1, 500)              # radius increases with angle\n\nx_points = r * np.cos(theta)\ny_points = 0.001*np.random.randn(*x_points.shape)\nz_points = r * np.sin(theta)\ncolors_plotly = np.linspace(0, 1, 500)\ncolors = plt.cm.viridis(np.linspace(0, 1, 500))                                        # Generate a color gradient\n\n# Create the 3D scatter plot\nfig = go.Figure(data=[go.Scatter3d(\n    x=x_points,\n    y=y_points,\n    z=z_points,\n    mode='markers',\n    marker=dict(\n        size=5,                                                                         # Size of the markers\n        color=colors_plotly,                                                            # Color of the markers\n        colorscale='viridis',                                                           # Color scale\n        showscale=False,                                                                 # Show color scale\n    )\n)])\n\nfig.update_layout(\n    plot_bgcolor='rgba(0,0,0,0)',  # Remove background color\n    width=450, \n    height=355,  \n    scene=dict(\n        xaxis_title='x',\n        yaxis_title='y',\n        zaxis_title='z',\n    ),\n)\n\ncamera = dict(\n    eye=dict(x=2.5, y=0., z=0.)\n    )\n\n\nfig.update_layout(scene_camera=camera )\nfig.show()"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Your website",
+    "section": "",
+    "text": "Where we can learn the basics about quarto.\nWith and example of how to cite (Crameri, Shephard, and Heron 2020)"
+  },
+  {
+    "objectID": "index.html#welcome-to-your-new-website",
+    "href": "index.html#welcome-to-your-new-website",
+    "title": "Your website",
+    "section": "",
+    "text": "Where we can learn the basics about quarto.\nWith and example of how to cite (Crameri, Shephard, and Heron 2020)"
+  }
+]
