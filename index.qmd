@@ -1,0 +1,19 @@
+---
+title: My first page
+toc: true
+  links:
+    - icon: github
+      text: Github
+      href: https://github.com/AlexandreDabySeesaram/QuartoCourse
+format:
+  html:
+    page-layout: full
+bibliography: Ressources/biblio_web.bib
+
+---
+
+## Welcome to your new website !
+
+Where we can learn the basics about quarto.
+
+With and example of how to cite [@crameriMisuseColourScience2020a]

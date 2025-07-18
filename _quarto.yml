@@ -1,0 +1,32 @@
+################################################################################
+###                                                                          ###
+### Created by Alexandre Daby-Seesaram                                       ###
+###                                                                          ###
+### École Polytechnique, Palaiseau, France                                   ###
+###                                                                          ###
+################################################################################
+
+project:
+  resources:
+    - "Resources"
+  type: website
+  output-dir: public
+website:
+  title: "Test Website"
+  # site-url: https://polemecanique.github.io/
+  description: "This is a test website"
+  navbar:
+    # logo: "Resources/Images/Logotype-X_ENSTA-Ecoles-Horizontal-Blanc.png"
+    logo: "Resources/Images/Logotype_IPP_X_ENSTA.svg"
+    right:
+      - href: index.qmd
+        text: Home
+        
+execute:
+  freeze: auto
+format:
+  html:
+    theme:
+      light: [flatly]
+      dark: [darkly]
+    toc: true
